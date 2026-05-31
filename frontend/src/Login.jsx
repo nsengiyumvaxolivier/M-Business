@@ -49,7 +49,7 @@ function Login() {
         <>
 
             <div className="container-fluid bg-gray-100 w-full h-screen p-3 flex">
-                <div className="container w-[90%] bg-white p-3 md:w-1/3 rounded m-auto shadow shadow-2xl shadow-blue-800 transition duration-700 -translate-1.5 animate">
+                <div className="container w-[90%] bg-white p-3 md:w-1/3 rounded m-auto shadow shadow-2xl shadow-gray-500 transition duration-700 -translate-1.5 animate">
                 <div className="flex w-full justify-between">
                     <h4 className='font-bold p-2'>Login Here</h4>
                     <div className="info p-1">
