@@ -48,8 +48,8 @@ function Login() {
     return (
         <>
 
-            <div className="container-fluid bg-gray-200 w-full h-screen p-3 flex">
-                <div className="container w-[90%] bg-white p-3 md:w-1/3 rounded m-auto shadow shadow-blue-300 transition duration-700 -translate-1.5 animate">
+            <div className="container-fluid bg-gray-100 w-full h-screen p-3 flex">
+                <div className="container w-[90%] bg-white p-3 md:w-1/3 rounded m-auto shadow shadow-2xl shadow-blue-800 transition duration-700 -translate-1.5 animate">
                 <div className="flex w-full justify-between">
                     <h4 className='font-bold p-2'>Login Here</h4>
                     <div className="info p-1">
@@ -69,11 +69,11 @@ function Login() {
 
                         <label htmlFor="" className='block text-sm my-2'>Password</label>
                         <input type="password" onChange={(e) => setuser({ ...user, password: e.target.value })} name="" id="password" className='w-full p-1 my-2 text-sm p-2 border border-gray-300 rounded outline-0 focus:outline focus:outline-2 focus:outline-blue-500' />
-                        <div className="flex py-2">
+                        <div className="flex py-4">
                             <input type="checkbox" name="" id="" onClick={()=>show()} className='p-2' />
                             <label htmlFor="" className='mx-1 text-sm font-bold'>Show Password</label>
                         </div>
-                        <div className="flex py-2 justify-between ">
+                        <div className="flex pt-5 justify-between ">
                             <button onClick={() => login()} className='bg-blue-800 text-[12px] font-bold text-white rounded p-1 px-4'>Login</button>
                             <Link className='text-green-500 font-bold rounded p-2 underline text-sm' to="/create-account">SignUp</Link>
                         </div>
