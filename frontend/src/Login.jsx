@@ -74,7 +74,7 @@ function Login() {
                         </div>
                         <div className="flex pt-5 justify-between ">
                             <button onClick={() => login()} className='bg-yellow-800 shadow shadow-white text-[12px] font-bold text-white cursor-pointer border  rounded p-1 px-4 transition hover:transform hover:-translate-0.5'>Login</button> 
-                            <Link className='text-white  shadow shadow-green-400 border border-green-400  font-bold rounded p-2 text-sm cursor-pointer' to="/create-account">Signup</Link>
+                            <Link className='text-white  shadow shadow-green-400 border border-green-400  font-bold rounded p-2 text-sm cursor-pointer' to="/add-product">Signup</Link>
                         </div>
                     </div>
 
