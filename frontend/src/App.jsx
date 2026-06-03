@@ -5,6 +5,7 @@ import Create from './Create'
 import Product from './Product'
 import Add from './Add'
 import Update from './Update'
+import Supplier from './Supplier'
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={< Login />}></Route>
-      <Route path='/create-account' element={<Create />}></Route>
+      <Route path='/create-account' element={<Add />}></Route>
       <Route path='/add-product' element={<Add />}></Route>
       <Route path='/products' element={<Product />}></Route>
       <Route path='/update-product/:id' element={<Update />}></Route>
+      <Route path='/supplier' element={<Supplier />}></Route>
     </Routes>
     </BrowserRouter>
     </>
