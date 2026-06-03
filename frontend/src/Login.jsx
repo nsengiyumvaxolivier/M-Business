@@ -48,11 +48,11 @@ function Login() {
     return (
         <>
 
-            <div className="container-fluid bg-gray-100 w-full h-screen p-3 flex">
-                <div className="container w-[90%] bg-white p-3 md:w-1/3 rounded m-auto shadow shadow-2xl shadow-gray-500 transition duration-700 -translate-1.5 animate">
-                <div className="flex w-full justify-between">
-                    <h4 className='font-bold p-2'>Login Here</h4>
-                    <div className="info p-1">
+            <div className="container-fluid bg-yellow-900 w-full h-screen p-3 flex">
+                <div className="container w-[95%] bg-yellow-800 p-3 md:w-1/2 rounded m-auto shadow border border-5 border-dashed border-yellow-700">
+                <div className="flex w-full justify-between relative">
+                    <h4 className='font-bold p-2 text-white'>Login Tou Your Account</h4>
+                    <div className="info p-1 absolute right-0">
                         {message.code==200 &&<div className="message p-2 bg-green-400 rounded text-sm text-white">{message.message,location("products")}</div>}
                         {message.code==100 &&<div className="message p-2 bg-orange-400 rounded text-sm text-white">{message.message}</div>}
                         {message.code==50 &&<div className="message p-2 bg-red-500 rounded text-sm text-white">{message.message} !!</div>}
@@ -62,20 +62,19 @@ function Login() {
                     </div>
                     
                     
-                    <hr className='bg-blue-600 font-bold text-blue-700'/>
+                    <hr className='bg-blue-600 font-bold text-white'/>
                     <div className="forms w-full p-3">
-                        <label htmlFor="" className='block text-sm my-2'>UserName</label>
-                        <input type="text" onChange={(e) => setuser({ ...user, username: e.target.value })} name="" id="" className='w-full p-1 my-2 border text-sm p-2 border-gray-300 rounded outline-0 focus:outline focus:outline-2 focus:outline-blue-500' />
-
-                        <label htmlFor="" className='block text-sm my-2'>Password</label>
-                        <input type="password" onChange={(e) => setuser({ ...user, password: e.target.value })} name="" id="password" className='w-full p-1 my-2 text-sm p-2 border border-gray-300 rounded outline-0 focus:outline focus:outline-2 focus:outline-blue-500' />
+                        <label htmlFor="" className='block text-sm my-2 text-white'>Username</label> 
+                        <div className="flex w-full border border-3 rounded focus:outline-1 border-yellow-900 my-3"><i className='bi bi-person-fill font-bold w-[10%] text-center bg-yellow-800 p-1'></i><input type="text" name="" id="" onChange={(e) => setuser({ ...user, username: e.target.value })} className='w-[90%] outline-0 p-1 text-sm bg-white' /></div>
+                       <label htmlFor="" className='block text-sm my-2 text-white'>Password</label>
+                        <div className="flex w-full border rounded focus:outline-1 border-yellow-900 my-3 border-3 "><i className='bi bi-lock-fill font-bold w-[10%] text-center bg-yellow-800 p-1'></i><input type="password" name="" id="password" onChange={(e) => setuser({ ...user, password: e.target.value })} className='w-[90%] outline-0 p-1 text-sm bg-white' /></div>
                         <div className="flex py-4">
                             <input type="checkbox" name="" id="" onClick={()=>show()} className='p-2' />
                             <label htmlFor="" className='mx-1 text-sm font-bold'>Show Password</label>
                         </div>
                         <div className="flex pt-5 justify-between ">
-                            <button onClick={() => login()} className='bg-blue-800 text-[12px] font-bold text-white rounded p-1 px-4'>Login</button>
-                            <Link className='text-green-500 font-bold rounded p-2 underline text-sm' to="/create-account">SignUp</Link>
+                            <button onClick={() => login()} className='bg-yellow-800 shadow shadow-white text-[12px] font-bold text-white cursor-pointer border  rounded p-1 px-4 transition hover:transform hover:-translate-0.5'>Login</button> 
+                            <Link className='text-white  shadow shadow-green-400 border border-green-400  font-bold rounded p-2 text-sm cursor-pointer' to="/create-account">Signup</Link>
                         </div>
                     </div>
 
