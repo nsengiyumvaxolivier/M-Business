@@ -138,5 +138,6 @@ app.get("/get-supplier",(req,res)=>{
 
 //Server Startting Point.................................................................
 app.listen(process.env.PORT,()=>{
-    console.log("Running.....")
+    console.log("Running.....");
+    console.log("Host:", process.env.DB_HOST);
 })
