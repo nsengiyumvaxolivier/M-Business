@@ -12,7 +12,7 @@ function Product() {
     const [selected,setselected]=useState("");
    
     useEffect(() => {
-        axios.get("http://localhost:7000/get-products")
+        axios.get("https://m-business-dxhp.onrender.com/get-products")
             .then(res => {
                 setproducts(res.data);
                  setproductcopy(res.data);
@@ -20,7 +20,7 @@ function Product() {
 
     }, [])
     const Delete = (p) => {
-        axios.delete(`http://localhost:7000/delete-product/${p}`)
+        axios.delete(`https://m-business-dxhp.onrender.com/delete-product/${p}`)
             .then(res => {
                 alert(res.data);
                 // to fillter the table agin while the row deleted...........................................................

@@ -9,7 +9,7 @@ function Create() {
     });
     const location = useNavigate();
     const submit =()=>{
-        axios.post("http://localhost:7000/create",user)
+        axios.post("https://m-business-dxhp.onrender.com/create",user)
         .then(res=>{
             alert(res.data);
             location("/");

@@ -17,7 +17,7 @@ function Login() {
     const location = useNavigate();
     const login = () => {
      
-        axios.post("http://localhost:7000/login", user)
+        axios.post("https://m-business-dxhp.onrender.com/login", user)
             .then(res => {
                const output=res.data;
               

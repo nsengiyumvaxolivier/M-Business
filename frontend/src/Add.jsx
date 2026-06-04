@@ -46,7 +46,7 @@ function Add() {
     <>
     
      <div className="container-fluid bg-yellow-900 w-full h-[fit-content] md:h-screen p-3 flex">
-        <div className="container bg-yellow-8000 border border-yellow-600 border-2 p-3 w-[95%] md:w-[80%] rounded m-auto">
+        <div className="container bg-yellow-800 border border-double border-yellow-600 p-3 w-[95%] md:w-[80%] rounded m-auto">
         <h4 className='font-bold p-2 text-white'>Add Product</h4>
         
         <hr className='text-white' />
@@ -57,7 +57,7 @@ function Add() {
         <input type="text" onChange={(e)=>setprodcut({...product,pname:e.target.value})} name="" id="" className='w-full p-1 my-2 border border-2 border-yellow-900 outline-0 bg-white font-bold rounded' />
             </div>
             <div className="w-full md:w-1/2 p-2">
-              <label htmlFor="" className='block text-white text-sm'>Supplier (option)</label>
+              <label htmlFor="" className='block text-white text-sm appearance-none'>Supplier (option)</label>
         <select type="text" onChange={(e)=>setprodcut({...product,supplier:e.target.value})} name="" id="" className='w-full p-1 my-2 border border-2 border-yellow-900 outline-0 bg-white font-bold rounded'>
           <option value={0} selected>--------</option>
           {
