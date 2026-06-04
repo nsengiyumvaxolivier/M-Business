@@ -56,10 +56,10 @@ app.post("/login",(req,res)=>{
 })
 //add Product........................................
 app.post("/add-product",(req,res)=>{
-    const {pname,in_price,out_price,stock}=req.body;
+    const {pname,in_price,out_price,stock,piece,exp_date,supplier,price}=req.body;
     
-    const insert ="insert into product(p_name,in_price,out_price,p_stock) values(?,?,?,?)";
-    conn.query(insert,[pname,in_price,out_price,stock],(err,result)=>{
+    const insert ="insert into product(p_name,in_price,out_price,p_stock,supplier,unit_in_price,expriy_date,piece,profit,unit_out_price) values(?,?,?,?,?,?,?,?,?,?)";
+    conn.query(insert,[pname,in_price,out_price,stock*piece,supplier,price,exp_date,piece,out_price-in_price,piece*out_price],(err,result)=>{
         if (err) {
            return res.json({error:err});
         }
@@ -112,6 +112,30 @@ app.put("/edit/:id",(req,res)=>{
         return res.json("product Updated");
     })
 })
+//add supplier..............................................................
+app.post("/add-supplier",(req,res)=>{
+    const {name,phone,location}=req.body;
+    const insert = "insert into supplier(sup_name,phone,location) values(?,?,?)";
+    conn.query(insert,[name,phone,location],(err,result)=>{
+        if (err) {
+         return res.json({error:err})   
+        }
+        return res.json("supplier Added");
+    })
+})
+
+// select Supplier.............................................................
+app.get("/get-supplier",(req,res)=>{
+    const select =" SELECT * FROM supplier";
+    conn.query(select,(err,result)=>{
+        if (err) {
+            return res.json({error:err})
+        }
+        return res.json(result);
+    })
+})
+
+
 //Server Startting Point.................................................................
 app.listen(process.env.PORT,()=>{
     console.log("Running.....")
