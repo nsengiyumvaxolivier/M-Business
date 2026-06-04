@@ -140,4 +140,6 @@ app.get("/get-supplier",(req,res)=>{
 app.listen(process.env.PORT,()=>{
     console.log("Running.....");
     console.log("Host:", process.env.DB_HOST);
+     console.log("Host:", process.env.USER_NAME);
+     console.log("Host:", process.env.DATABASE);
 })
